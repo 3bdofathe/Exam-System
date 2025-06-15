@@ -10,7 +10,7 @@ import {
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { ToastAlertComponent } from '../../shared/toast-alert/toast-alert.component';
-import { LoadingComponent } from '../../shared/loading/loading.component';
+// import { LoadingComponent } from '../../shared/loading/loading.component';
 @Component({
   selector: 'app-sign-up',
   imports: [
@@ -18,7 +18,7 @@ import { LoadingComponent } from '../../shared/loading/loading.component';
     CommonModule,
     HttpClientModule,
     ToastAlertComponent,
-    LoadingComponent
+    // LoadingComponent
   ],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.css',

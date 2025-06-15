@@ -4,13 +4,13 @@ import { RouterModule, Router, ActivatedRoute } from '@angular/router';
 import { ResultsService } from '../../services/results.service';
 import { SearchService } from '../../services/search.service';
 import { LoadingComponent } from "../../shared/loading/loading.component";
-import { SmallCardComponent } from "../../shared/components/small-card/small-card.component";
+// import { SmallCardComponent } from "../../shared/components/small-card/small-card.component";
 import { CommonModule } from '@angular/common';
 import { NotFoundComponent } from "../../shared/not-found/not-found.component";
 
 @Component({
   selector: 'app-reports',
-  imports: [LoadingComponent, SmallCardComponent, CommonModule, NotFoundComponent],
+  imports: [LoadingComponent, CommonModule, NotFoundComponent],
   templateUrl: './reports.component.html',
   styleUrl: './reports.component.css'
 })

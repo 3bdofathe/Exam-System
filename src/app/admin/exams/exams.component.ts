@@ -11,7 +11,7 @@ import { ToastAlertComponent } from "../../shared/toast-alert/toast-alert.compon
 import { Subscription } from 'rxjs';
 import { SearchService } from '../../services/search.service';
 import {LoadingComponent} from '../../shared/loading/loading.component';
-import { ExamCardComponent } from "../students-dashboard/students-details/exam-card/exam-card.component";
+// import { ExamCardComponent } from "../students-dashboard/students-details/exam-card/exam-card.component";
 import { ConfirmDialogComponent } from '../../shared/confirm-dialog/confirm-dialog.component';
 
 @Component({
@@ -25,7 +25,6 @@ import { ConfirmDialogComponent } from '../../shared/confirm-dialog/confirm-dial
     FormsModule,
     ToastAlertComponent,
     LoadingComponent,
-    ExamCardComponent,
     ConfirmDialogComponent
 ],
   templateUrl: './exams.component.html',

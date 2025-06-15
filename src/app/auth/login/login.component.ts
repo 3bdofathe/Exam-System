@@ -10,11 +10,11 @@ import {
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { ToastAlertComponent } from '../../shared/toast-alert/toast-alert.component';
-import { LoadingComponent } from '../../shared/loading/loading.component';
+// import { LoadingComponent } from '../../shared/loading/loading.component';
 
 @Component({
   selector: 'app-login',
-  imports: [ReactiveFormsModule, CommonModule, HttpClientModule, ToastAlertComponent, LoadingComponent],
+  imports: [ReactiveFormsModule, CommonModule, HttpClientModule, ToastAlertComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })

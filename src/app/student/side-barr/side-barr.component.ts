@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { HideSidebarDirective } from '../../shared/directives/hide-sidebar.directive';
+// import { HideSidebarDirective } from '../../shared/directives/hide-sidebar.directive';
 import { ConfirmDialogComponent } from '../../shared/confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-side-barr',
-  imports: [RouterModule, HideSidebarDirective, ConfirmDialogComponent],
+  imports: [RouterModule, ConfirmDialogComponent],
   templateUrl: './side-barr.component.html',
   styleUrl: './side-barr.component.css'
 })
