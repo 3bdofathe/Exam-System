@@ -17,12 +17,30 @@
       <a *ngFor="let link of navLinks" [href]="link.path" class="nav-link" (click)="menuOpen = false">{{
         link.name
       }}</a>
+      <!-- Show navbar-buttons inside menu on mobile -->
+      <ng-container *ngIf="menuOpen">
+        <div class="navbar-buttons mobile">
+          @if (user) {
+          <div class="user-info">
+            <span class="user-name">Welcome, {{ user.name }}</span>
+            @if(user.role === 'admin') {
+            <a routerLink="/admin-dashboard" class="btn-login" (click)="menuOpen = false">Admin Dashboard</a>
+            }@else if(user.role === 'student') {
+            <a routerLink="/student-details" class="btn-login" (click)="menuOpen = false">Student Dashboard</a>
+            }
+          </div>
+          }@else {
+          <a routerLink="/auth/login" class="btn-login" (click)="menuOpen = false">Login</a>
+          <a routerLink="/auth/register" class="btn-register" (click)="menuOpen = false">Get Started</a>
+          }
+        </div>
+      </ng-container>
     </div>
 
-    <div class="navbar-buttons">
+    <!-- Desktop navbar-buttons -->
+    <div class="navbar-buttons desktop">
       @if (user) {
       <div class="user-info">
-
         <span class="user-name">Welcome, {{ user.name }}</span>
         @if(user.role === 'admin') {
         <a routerLink="/admin-dashboard" class="btn-login">Admin Dashboard</a>
@@ -31,7 +49,6 @@
         }
       </div>
       }@else {
-
       <a routerLink="/auth/login" class="btn-login">Login</a>
       <a routerLink="/auth/register" class="btn-register">Get Started</a>
       }
