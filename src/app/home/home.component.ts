@@ -195,4 +195,6 @@ export class HomeComponent {
       { name: 'GDPR', link: '#' }
     ]
   };
+
+  menuOpen = false;
 } 

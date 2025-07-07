@@ -7,8 +7,14 @@
       /></a>
     </div>
 
-    <div class="navbar-links">
-      <a *ngFor="let link of navLinks" [href]="link.path" class="nav-link">{{
+    <!-- Hamburger menu icon for mobile -->
+    <button class="navbar-menu-btn" (click)="menuOpen = !menuOpen" aria-label="Open menu">
+      <i class="bi bi-list"></i>
+    </button>
+
+    <!-- Navbar links (desktop & mobile) -->
+    <div class="navbar-links" [class.active]="menuOpen">
+      <a *ngFor="let link of navLinks" [href]="link.path" class="nav-link" (click)="menuOpen = false">{{
         link.name
       }}</a>
     </div>
